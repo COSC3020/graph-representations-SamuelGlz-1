@@ -16,6 +16,8 @@ depend on the number of vertices, the number of edges, or both?
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
+The run time complexity for my conversion is $\theta$(|V|^2) because the fucntion convertToAdjList passes through the whole matrix, having to iterate through all the edjes
+
 ## Bonus
 
 Implement a function to convert an adjacency list to an adjacency matrix and
