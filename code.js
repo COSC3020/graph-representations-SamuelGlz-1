@@ -1,3 +1,7 @@
+//code for converToAdjLsit edited from last semester, convertToAdjMatrix new
+
+const { number } = require("jsverify");
+
 function convertToAdjList(adjMatrix) {
     let adjList = [];
     let tempList
@@ -30,18 +34,29 @@ function convertToAdjMatrix(adjList) {
     let nodeNumber = adjList.length
 
     for (i = 0; i < adjList.length; i++){
-        tempList = [];
 
-        for(j = 0; j < nodeNumber; j++){
-            tempList.push(0)
-        }
+        tempList = Array.from({ length: nodeNumber }).fill(0);
+
         adjMatrix.push(tempList);
-    }
 
-    for ()
+        //console.log(adjMatrix);
+
+        for(k = 0 ; k < nodeNumber; k++){
+
+            if(adjList[i][k] == undefined){
+                //console.log("skip")
+            }
+            else{
+                let num = adjList[i][k]
+                adjMatrix[i][num] = 1
+            }
+
+        }
+
+    }
 
     return adjMatrix;
 }
 
 //console.log(convertToAdjList([[0,1,0],[1,0,1],[1,0,1]]))
-console.log(convertToAdjMatrix([[1],[0,2],[0,2]]))
+//console.log(convertToAdjMatrix([[1],[0,2],[0,2]]))
