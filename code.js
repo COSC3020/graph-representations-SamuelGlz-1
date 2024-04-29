@@ -41,16 +41,11 @@ function convertToAdjMatrix(adjList) {
             tempList.push(0)
         }
 
-        //tempList = Array.from({ length: vertNumber }).fill(0);
-
         adjMatrix.push(tempList);
-
-        //console.log(adjMatrix);
 
         for(k = 0 ; k < vertNumber; k++){
 
             if(adjList[i][k] == undefined){
-                //console.log("skip")
             }
             else{
                 let num = adjList[i][k]
@@ -63,6 +58,3 @@ function convertToAdjMatrix(adjList) {
 
     return adjMatrix;
 }
-
-//console.log(convertToAdjList([[0,1,0],[1,0,1],[1,0,1]]))
-console.log(convertToAdjMatrix([[1],[0,2],[0,2]]))
