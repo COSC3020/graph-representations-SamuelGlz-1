@@ -16,10 +16,12 @@ depend on the number of vertices, the number of edges, or both?
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-The run time complexity for my conversion is $\theta$(|V|^2) because the fucntion convertToAdjList passes through the whole matrix, having to iterate through all the edjes
+The run time complexity for my conversion is $\Theta$(|V|^2) because the fucntion convertToAdjList passes through the whole matrix, having to iterate through all the edjes
 
 ## Bonus
 
 Implement a function to convert an adjacency list to an adjacency matrix and
 analyze it as above.
+
+For my implementation for adjList $\rightarrow$ adjMatrix the $\Theta$ complexity is $(|V|^2)$ because it has three for loops, but two of them are sequential inside the outer loop. We end up with $V * (2V)$, which asymptotically is an element of $\Theta(|V|^2)$. 
 
